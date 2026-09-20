@@ -1,5 +1,5 @@
-# Velmo Black — layout da versão de referência
+# Velmo Black — versão compacta
 
-Envie o conteúdo desta pasta para a **raiz** do repositório do GitHub Pages. O `index.html`, imagens, vídeos e as páginas auxiliares ficam no mesmo nível. Faça os commits dos vídeos individualmente caso o navegador rejeite um envio conjunto. Não envie o ZIP diretamente.
+Se as mídias e páginas auxiliares do pacote anterior já estão publicadas, substitua apenas `index.html` na raiz do repositório. Caso contrário, descompacte e envie todos os arquivos para a raiz.
 
-Esta versão preserva a estrutura visual do site `velmoteste5`, adiciona as fotos e os três vídeos de depoimentos ao carrossel, usa o vídeo de como consumir e o vídeo da nova fórmula, e atualiza a imagem do popup e o link do Instagram.
+Layout: seção inicial mais limpa; linha de produtos; rótulos e ingredientes lado a lado; depoimentos e vídeos; sabores e ofertas; informações logísticas, fabricante e dúvidas. O vídeo lateral do YouTube inicia mudo e em loop quando o navegador permitir; o botão “Ouvir vídeo” carrega a reprodução com som após clique. A garantia lateral liga às condições de reembolso. Popup mantém o disparo após 45% e saída pelo topo no computador.
