@@ -142,6 +142,13 @@ footer{border-top:1px solid var(--line);padding:50px 24px 120px;max-width:1180px
 .pre-entry .floating-guarantee,.pre-entry .floating-video{display:none}
 @media(max-width:1100px){.insights-grid{grid-template-columns:1fr}.product-insights .viewer-wrap{grid-template-columns:1.25fr .75fr}.floating-guarantee{top:auto;bottom:155px;width:132px}.floating-video{width:180px}}
 @media(max-width:760px){.product-insights{padding-top:55px;padding-bottom:50px}.product-insights .viewer-wrap{grid-template-columns:1fr}.product-insights .formula-center{min-height:150px}.product-insights .formula-center img{max-height:140px}.floating-video{position:relative;top:auto;right:auto;margin:0 18px 14px auto;width:min(260px,calc(100% - 36px))}.floating-guarantee{left:8px;top:82px;bottom:auto;width:106px;padding:6px;gap:1px}.floating-guarantee span{font-size:1.1rem}.floating-guarantee strong{font-size:.7rem}.floating-guarantee small{display:none}}
+
+/* Entrada mais curta e título legível em telas de todos os tamanhos */
+.hero{min-height:0;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:28px;padding-top:44px;padding-bottom:30px}.hero h1{font-size:clamp(2.5rem,4.5vw,4.8rem);line-height:1.05;letter-spacing:-.05em}.hero h1 .hero-brand-line,.hero h1 .hero-message{display:block}.hero h1 .hero-brand-line{white-space:nowrap}.hero h1 .hero-message{font-size:.83em;line-height:1.07;max-width:700px}.hero-visual{min-height:440px}.hero .family-stage{height:440px}.hero-family-product{max-height:440px;transform:translateY(-14px)}.product-insights{padding-top:38px}
+/* O cartaz já contém as regras; apresentar só a arte e os dois acessos. */
+.giveaway-card{width:min(940px,96vw);max-height:96dvh;overflow:visible;padding:14px}.giveaway-image{width:100%;max-height:calc(96dvh - 110px);object-fit:contain;border-radius:14px}.giveaway-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.giveaway-actions .btn{min-height:48px;text-align:center}.giveaway-close{right:9px;top:9px;background:#071012;border:1px solid #fff;box-shadow:0 2px 12px #000}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:8px;padding-top:40px;padding-bottom:18px}.hero-visual{min-height:320px}.hero .family-stage{height:320px}.hero-family-product{max-height:320px}}
+@media(max-width:600px){.hero h1{font-size:clamp(2.2rem,9vw,3.1rem)}.hero h1 .hero-message{font-size:.82em}.hero{padding-top:24px}.giveaway-card{padding:10px}.giveaway-image{max-height:calc(94dvh - 112px)}.giveaway-actions{gap:7px;margin-top:8px}.giveaway-actions .btn{font-size:.79rem;padding:9px 5px;min-height:45px}}
 </style>
 </head>
 <body class="pre-entry">
@@ -150,7 +157,7 @@ footer{border-top:1px solid var(--line);padding:50px 24px 120px;max-width:1180px
 <header class="topbar glass">
 <a aria-label="Velmo Black" class="brand" href="#top"><img alt="Velmora" class="brand-logo-img" src="velmora_logo.png"/><span>VELMO BLACK</span></a>
 <nav aria-label="Navegação principal" class="desktop-nav">
-<a href="#linha">Linha</a><a href="#drink">Drink</a><a href="#ofertas" data-jump-offer="caps">Cápsulas</a><a href="#ofertas" data-jump-offer="combo">Combo</a><a href="#depoimentos">Depoimentos</a><a href="#ofertas">Ofertas</a><a href="#faq">Dúvidas</a>
+<a href="#rotulo">Linha</a><a href="#ofertas" data-jump-offer="drink">Drink</a><a href="#ofertas" data-jump-offer="caps">Cápsulas</a><a href="#ofertas" data-jump-offer="combo">Combo</a><a href="#depoimentos">Depoimentos</a><a href="#ofertas">Ofertas</a><a href="#faq">Dúvidas</a>
 </nav>
 <div class="top-actions"><a class="top-cta secondary" href="https://chat.whatsapp.com/HzU8NXe29m94Q3h8b6AS1o?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4" rel="noopener" target="_blank">Grupo de descontos</a><a class="top-cta" href="#ofertas">Ver ofertas</a></div>
 </header>
@@ -159,18 +166,12 @@ footer{border-top:1px solid var(--line);padding:50px 24px 120px;max-width:1180px
 <section class="hero section-pad">
 <div class="hero-copy reveal">
 <span class="eyebrow">LINHA VELMO BLACK</span>
-<h1>Velmo Black.<br/><span>Você só precisa de uma decisão pra mudar tudo.</span></h1>
+<h1><span class="hero-brand-line">Velmo Black.</span><span class="hero-message">Você só precisa de uma decisão pra mudar tudo.</span></h1>
 <p class="hero-sub">Drink nos sabores <strong>Morango</strong> e <strong>Tangerina</strong>, <strong>Burns Caps</strong> ou o <strong>Combo Drink + Cápsulas</strong>.</p>
 
 </div>
-<div class="hero-visual reveal" id="produto"><div class="hero-glow"></div><div class="product-stage family-stage"><img alt="Linha Velmo Black Drink e Burns Caps" class="hero-family-product" src="velmo_combo.png"/></div><div class="family-tags"><a href="#drink">🥤 Drink</a><a href="#ofertas" data-jump-offer="caps">💊 Cápsulas</a><a href="#ofertas" data-jump-offer="combo">⚡ Combo</a></div></div>
-</section><section class="section-pad family-section" id="linha">
-<div class="section-heading reveal"><span class="eyebrow">LINHA COMPLETA</span><h2>Encontre o Velmo Black que combina com sua rotina.</h2><p>Conheça cada opção separadamente ou escolha o combo.</p></div>
-<div class="family-grid">
-<article class="family-card glass reveal"><div class="family-media duo"><img alt="Velmo Black Drink Morango" src="pote_morango.png"/><img alt="Velmo Black Drink Tangerina" src="pote_tangerina.png"/></div><span class="eyebrow">VELMO BLACK DRINK</span><h3>Drink</h3><p>Disponível nos sabores Morango e Tangerina, com opções de diferentes quantidades.</p><a class="btn btn-secondary" href="#drink">Conhecer o Drink</a></article>
-<article class="family-card glass reveal"><div class="family-media"><img alt="Velmo Black Burns Caps" src="velmo_caps.png"/></div><span class="eyebrow">VELMO BLACK BURNS CAPS</span><h3>Cápsulas</h3><p>60 cápsulas por pote e 30 porções, conforme o rótulo oficial do produto.</p><a class="btn btn-secondary" href="#ofertas" data-jump-offer="caps">Conhecer as Cápsulas</a></article>
-<article class="family-card featured-family reveal"><div class="family-media combo"><img alt="Combo Velmo Black Drink e Cápsulas" src="velmo_combo.png"/></div><span class="eyebrow">COMBO VELMO BLACK</span><h3>Drink + Cápsulas</h3><p>Escolha Morango ou Tangerina junto com um pote de Velmo Black Burns Caps.</p><a class="btn btn-primary" href="#ofertas" data-jump-offer="combo">Conhecer o Combo</a></article>
-</div></section>
+<div class="hero-visual reveal" id="produto"><div class="hero-glow"></div><div class="product-stage family-stage"><img alt="Linha Velmo Black Drink e Burns Caps" class="hero-family-product" src="velmo_combo.png"/></div><div class="family-tags"><a href="#ofertas" data-jump-offer="drink">🥤 Drink</a><a href="#ofertas" data-jump-offer="caps">💊 Cápsulas</a><a href="#ofertas" data-jump-offer="combo">⚡ Combo</a></div></div>
+</section>
 
 
 
@@ -230,19 +231,7 @@ footer{border-top:1px solid var(--line);padding:50px 24px 120px;max-width:1180px
 </section>
 
 
-<section class="section-pad flavor-section" id="drink">
-<div class="section-heading reveal"><span class="eyebrow">VELMO BLACK DRINK</span><h2>Escolha seu sabor.</h2><p>Morango ou Tangerina: selecione o sabor desejado na hora de escolher sua oferta.</p></div>
-<div class="flavor-grid">
-<article class="flavor-card strawberry-card reveal">
-<div class="flavor-card-media"><img alt="Pote Velmo Black Drink sabor morango" loading="lazy" src="pote_morango.png"/></div>
-<div class="flavor-card-copy"><span>🍓</span><h3>Morango</h3><p>Uma das duas opções disponíveis para escolher no checkout.</p><button class="btn btn-secondary flavor-trigger" data-offer="promo" data-preselect="strawberry">Escolher Morango</button></div>
-</article>
-<article class="flavor-card tangerine-card reveal">
-<div class="flavor-card-media"><img alt="Pote Velmo Black Drink sabor tangerina" loading="lazy" src="pote_tangerina.png"/></div>
-<div class="flavor-card-copy"><span>🍊</span><h3>Tangerina</h3><p>Uma das duas opções disponíveis para escolher no checkout.</p><button class="btn btn-secondary flavor-trigger" data-offer="promo" data-preselect="tangerine">Escolher Tangerina</button></div>
-</article>
-</div>
-</section>
+
 <section class="section-pad offers-section" id="ofertas"><div class="offer-transition"><span class="eyebrow">AGORA, ESCOLHA SUA OFERTA</span><h2>Veja as ofertas do Velmo Black que preparamos para você.</h2><p>Quando estiver pronto, escolha o produto e finalize no checkout oficial Hest.</p></div>
 <div class="section-heading reveal"><span class="eyebrow">OFERTAS VELMO BLACK</span><h2>Escolha o produto e a quantidade.</h2><p>Drink, Burns Caps ou Combo. Todos os botões direcionam para o checkout oficial Hest correspondente.</p></div>
 <div class="offer-product-tabs glass reveal"><button class="offer-product-tab active" data-offer-panel="drink">🥤 Drink</button><button class="offer-product-tab" data-offer-panel="caps">💊 Cápsulas</button><button class="offer-product-tab" data-offer-panel="combo">⚡ Combo</button></div>
@@ -352,7 +341,7 @@ footer{border-top:1px solid var(--line);padding:50px 24px 120px;max-width:1180px
 <div><b>Privacidade e cookies</b><p>Usamos cookies e o Meta Pixel para mensuração de anúncios quando você autoriza.</p></div>
 <div class="cookie-actions"><button class="btn btn-ghost" id="rejectCookies">Recusar</button><button class="btn btn-primary" id="acceptCookies">Aceitar</button></div>
 </div>
-<div aria-hidden="true" class="giveaway-modal" id="giveawayModal"><div class="giveaway-backdrop"></div><div aria-labelledby="giveawayTitle" aria-modal="true" class="giveaway-card" role="dialog"><button aria-label="Fechar" class="giveaway-close" data-close-giveaway="" type="button">×</button><img class="giveaway-image" id="giveawayImageWrap" src="popup.jpeg" alt="Arte do sorteio Velmo Black"><div class="giveaway-copy"><span class="eyebrow">GRUPO + INSTAGRAM</span><h2 id="giveawayTitle">Quer ganhar um combo de Velmo Black Drink + Velmo Black Cápsulas para um mês?</h2><p class="giveaway-sub">Participe seguindo as regras da publicação:</p><ul class="giveaway-rules"><li>✓ Curtir a publicação do Instagram</li><li>✓ Seguir o Instagram</li><li>✓ Marcar uma pessoa na publicação</li><li>✓ Estar dentro do grupo de ofertas</li></ul><div class="giveaway-actions"><a class="btn btn-primary" href="https://chat.whatsapp.com/HzU8NXe29m94Q3h8b6AS1o?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4" rel="noopener" target="_blank">Entrar no grupo</a><a class="btn btn-secondary" href="https://www.instagram.com/infinittynegocios/" target="_blank" rel="noopener">Ver no Instagram</a></div></div></div></div>
+<div aria-hidden="true" class="giveaway-modal" id="giveawayModal"><div class="giveaway-backdrop"></div><div aria-label="Sorteio Velmo Black" aria-modal="true" class="giveaway-card" role="dialog"><button aria-label="Fechar" class="giveaway-close" data-close-giveaway="" type="button">×</button><img class="giveaway-image" id="giveawayImageWrap" src="popup.jpeg" alt="Arte com as regras do sorteio Velmo Black"><div class="giveaway-actions"><a class="btn btn-primary" href="https://chat.whatsapp.com/HzU8NXe29m94Q3h8b6AS1o?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4" rel="noopener" target="_blank">Entrar no grupo</a><a class="btn btn-secondary" href="https://www.instagram.com/p/DdfisdTsnOe/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA==" rel="noopener" target="_blank">Ver post no Instagram</a></div></div></div>
 <script>
 const PIXEL_ID='1104258652536782';
 const WHATSAPP_URL='https://wa.me/message/YZJGV7GRVTZJA1';

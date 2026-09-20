@@ -1,5 +1,5 @@
-# Velmo Black — versão compacta
+# Velmo Black — ajuste de seções e popup
 
-Se as mídias e páginas auxiliares do pacote anterior já estão publicadas, substitua apenas `index.html` na raiz do repositório. Caso contrário, descompacte e envie todos os arquivos para a raiz.
+Substitua `index.html` na raiz do seu repositório. Imagens e vídeos do pacote anterior permanecem com os mesmos nomes.
 
-Layout: seção inicial mais limpa; linha de produtos; rótulos e ingredientes lado a lado; depoimentos e vídeos; sabores e ofertas; informações logísticas, fabricante e dúvidas. O vídeo lateral do YouTube inicia mudo e em loop quando o navegador permitir; o botão “Ouvir vídeo” carrega a reprodução com som após clique. A garantia lateral liga às condições de reembolso. Popup mantém o disparo após 45% e saída pelo topo no computador.
+A seção separada “Escolha seu sabor” e a seção “Encontre o Velmo Black que combina com sua rotina” foram removidas. Os links Drink, Cápsulas e Combo levam às abas da seção de ofertas. O título inicial foi compactado e o espaço entre as primeiras seções reduzido. O popup contém apenas a imagem e os botões de grupo e do post no Instagram; fecha somente pelo X. A lógica de disparo anterior (45% da página e intenção de saída no computador; 45% no celular, somente no caminho de leitura) foi mantida.
