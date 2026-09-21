@@ -214,8 +214,8 @@ footer{border-top:1px solid var(--line);padding:50px 24px 120px;max-width:1180px
 <div class="top-actions"><a class="top-cta secondary" href="https://chat.whatsapp.com/HzU8NXe29m94Q3h8b6AS1o?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4" rel="noopener" target="_blank">Grupo de descontos</a><a class="top-cta" href="#ofertas">Ver ofertas</a></div>
 </header>
 
-<main id="top"><section aria-label="Escolha de entrada" class="entry-gate" id="entryGate"><div class="entry-inner"><span class="eyebrow">VELMO BLACK</span><h1>Como você quer continuar?</h1><p class="entry-lead">Escolha o caminho que faz mais sentido para você.</p><div class="entry-options"><article class="entry-card entry-buy"><h2>Eu quero comprar agora</h2><p>Quero ir direto para as ofertas disponíveis.</p><button class="btn btn-primary entry-choice" data-entry-target="ofertas">Ver ofertas</button></article><article class="entry-card entry-learn"><h2>Ainda preciso conhecer melhor os produtos</h2><p>Quero conhecer experiências, vídeos, composição e informações do produto.</p><button class="btn btn-primary entry-choice" data-entry-target="depoimentos">Quero entender melhor</button></article></div></div></section>
-<section class="hero section-pad">
+<main id="top"><section aria-label="Escolha de entrada" class="entry-gate" id="entryGate"><div class="entry-inner"><span class="eyebrow">VELMO BLACK</span><h1>Como você quer continuar?</h1><p class="entry-lead">Escolha o caminho que faz mais sentido para você.</p><div class="entry-options"><article class="entry-card entry-buy"><h2>Eu quero comprar agora</h2><p>Quero ir direto para as ofertas disponíveis.</p><button class="btn btn-primary entry-choice" data-entry-target="ofertas">Ver ofertas</button></article><article class="entry-card entry-learn"><h2>Ainda preciso conhecer melhor os produtos</h2><p>Quero conhecer experiências, vídeos, composição e informações do produto.</p><button class="btn btn-primary entry-choice" data-entry-target="inicio">Quero entender melhor</button></article></div></div></section>
+<section class="hero section-pad" id="inicio">
 <div class="hero-copy reveal">
 <span class="eyebrow">LINHA VELMO BLACK</span>
 <h1><span class="hero-brand-line">Velmo Black.</span><span class="hero-message">Você só precisa de uma decisão pra mudar tudo.</span></h1>
@@ -565,7 +565,7 @@ entryChoices.forEach(b=>b.addEventListener('click',()=>enterSite(b.dataset.entry
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href')?.slice(1);if(!id||id==='top'||siteEntered)return;e.preventDefault();enterSite(id)}));
 const giveawayModal=document.getElementById('giveawayModal');
 function readingThresholdReached(){const available=document.documentElement.scrollHeight-innerHeight;return available>0&&scrollY/available>=.45}
-function openGiveaway(){if(!siteEntered||entryPath!=='depoimentos'||giveawayShown||!readingThresholdReached())return;giveawayShown=true;giveawayModal?.classList.add('open');giveawayModal?.setAttribute('aria-hidden','false')}
+function openGiveaway(){if(!siteEntered||entryPath!=='inicio'||giveawayShown||!readingThresholdReached())return;giveawayShown=true;giveawayModal?.classList.add('open');giveawayModal?.setAttribute('aria-hidden','false')}
 const hasMouse=matchMedia('(hover: hover) and (pointer: fine)');
 window.addEventListener('wheel',()=>{if(siteEntered)userScrolledAfterEntry=true},{passive:true});
 window.addEventListener('touchmove',()=>{if(siteEntered)userScrolledAfterEntry=true},{passive:true});
