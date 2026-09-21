@@ -211,6 +211,11 @@ footer{border-top:1px solid var(--line);padding:50px 24px 120px;max-width:1180px
 .entry-final-line strong{color:#85f5fa}
 @media(max-width:800px){.entry-benefits{grid-template-columns:repeat(2,minmax(0,1fr))}.entry-benefits>a,.entry-benefits>div{min-height:96px}}
 @media(max-width:480px){.entry-benefits{gap:7px}.entry-benefits>a,.entry-benefits>div{padding:10px 7px}.entry-benefits strong{font-size:.74rem}.entry-benefits small{font-size:.67rem}.entry-reassurance{margin-top:18px}}
+
+/* Antes da escolha, somente a navegação e os cartões de entrada ficam visíveis. */
+body.pre-entry footer,body.pre-entry .sticky-offers,body.pre-entry .whatsapp-widget{display:none!important}
+body.pre-entry .entry-gate{padding-bottom:max(40px,env(safe-area-inset-bottom));overflow:visible}
+@media(max-width:760px){body.pre-entry .entry-gate{min-height:calc(100svh - 84px);padding-top:28px;padding-bottom:36px}body.pre-entry .entry-lead{margin-bottom:21px}body.pre-entry .entry-options{gap:13px}body.pre-entry .entry-card{padding:21px 19px}body.pre-entry .entry-card h2{font-size:clamp(1.45rem,6vw,1.8rem);line-height:1.12}body.pre-entry .entry-card p{margin-bottom:17px;font-size:.9rem}body.pre-entry .entry-card .entry-choice{min-height:52px;font-size:.93rem}body.pre-entry .entry-benefits>a,body.pre-entry .entry-benefits>div{min-height:82px}}
 </style>
 </head>
 <body class="pre-entry">
@@ -567,10 +572,11 @@ document.getElementById('expandTransparency')?.addEventListener('click',function
 const rail=document.querySelector('.testimonial-rail');document.getElementById('testimonialPrev')?.addEventListener('click',()=>rail?.scrollBy({left:-380,behavior:'smooth'}));document.getElementById('testimonialNext')?.addEventListener('click',()=>rail?.scrollBy({left:380,behavior:'smooth'}));
 // WhatsApp + sticky
  document.getElementById('stickyComboButton')?.addEventListener('click',()=>goCheckout('combo','one',selectedComboFlavor));
-document.getElementById('whatsappBtn')?.addEventListener('click',()=>window.open(WHATSAPP_URL,'_blank'));const sticky=document.getElementById('stickyOffer');window.addEventListener('scroll',()=>sticky?.classList.toggle('show',scrollY>850),{passive:true});
+document.getElementById('whatsappBtn')?.addEventListener('click',()=>window.open(WHATSAPP_URL,'_blank'));const sticky=document.getElementById('stickyOffer');window.addEventListener('scroll',()=>sticky?.classList.toggle('show',document.body.classList.contains('site-entered')&&scrollY>850),{passive:true});
 renderViewer(false);
 
 // V6 entry gate
+if(document.body.classList.contains('pre-entry')){history.scrollRestoration='manual';requestAnimationFrame(()=>window.scrollTo(0,0))}
 const entryGate=document.getElementById('entryGate');
 const entryChoices=document.querySelectorAll('.entry-choice');
 let siteEntered=false,entryPath=null,giveawayShown=false,userScrolledAfterEntry=false;
