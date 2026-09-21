@@ -216,6 +216,25 @@ footer{border-top:1px solid var(--line);padding:50px 24px 120px;max-width:1180px
 body.pre-entry footer,body.pre-entry .sticky-offers,body.pre-entry .whatsapp-widget{display:none!important}
 body.pre-entry .entry-gate{padding-bottom:max(40px,env(safe-area-inset-bottom));overflow:visible}
 @media(max-width:760px){body.pre-entry .entry-gate{min-height:calc(100svh - 84px);padding-top:28px;padding-bottom:36px}body.pre-entry .entry-lead{margin-bottom:21px}body.pre-entry .entry-options{gap:13px}body.pre-entry .entry-card{padding:21px 19px}body.pre-entry .entry-card h2{font-size:clamp(1.45rem,6vw,1.8rem);line-height:1.12}body.pre-entry .entry-card p{margin-bottom:17px;font-size:.9rem}body.pre-entry .entry-card .entry-choice{min-height:52px;font-size:.93rem}body.pre-entry .entry-benefits>a,body.pre-entry .entry-benefits>div{min-height:82px}}
+
+/* No celular, os ingredientes ocupam toda a largura em uma grade de 2 cards. */
+@media(max-width:600px){
+  .product-insights .formula-family{display:block}
+  .product-insights .formula-center{min-height:250px;margin:12px 0 20px}
+  .product-insights .formula-center img{max-height:235px}
+  .product-insights .formula-column{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-bottom:22px}
+  .product-insights .formula-col-head{grid-column:1/-1;margin:0 0 4px}
+  .product-insights .formula-mini{min-width:0;padding:11px 10px}
+  .product-insights .formula-mini b{font-size:.82rem;line-height:1.2;overflow-wrap:anywhere}
+  .product-insights .formula-mini small{font-size:.69rem;line-height:1.32}
+}
+
+/* A frase fica flutuando sobre o ícone e não limita o deslocamento lateral. */
+.whatsapp-widget{width:64px;height:64px;max-width:none;gap:0}
+.whatsapp-widget .whatsapp-hint{position:absolute;right:0;bottom:calc(100% + 6px)}
+.whatsapp-widget.dock-left .whatsapp-hint{right:auto;left:0}
+.whatsapp-widget:not(.is-dragging){transition:left .18s ease,top .18s ease}
+@media(max-width:600px){.whatsapp-widget{width:58px;height:58px}}
 </style>
 </head>
 <body class="pre-entry">
@@ -231,7 +250,7 @@ body.pre-entry .entry-gate{padding-bottom:max(40px,env(safe-area-inset-bottom));
 
 <main id="top"><section aria-label="Escolha de entrada" class="entry-gate" id="entryGate"><div class="entry-inner"><span class="eyebrow">VELMO BLACK</span><h1>Como você quer continuar?</h1><p class="entry-lead">Escolha o caminho que faz mais sentido para você.</p><div class="entry-options"><article class="entry-card entry-buy"><h2>Eu quero comprar agora</h2><p>Quero ir direto para as ofertas disponíveis.</p><button class="btn btn-primary entry-choice" data-entry-target="ofertas">Ver ofertas - a partir de R$104,95</button></article><article class="entry-card entry-learn"><h2>Ainda preciso conhecer melhor os produtos</h2><p>Quero conhecer experiências, vídeos, composição e informações do produto.</p><button class="btn btn-primary entry-choice" data-entry-target="inicio">Quero entender melhor</button></article></div>
 <div class="entry-reassurance" aria-label="Por que escolher Velmo Black">
-<div class="entry-benefits"><a href="refund.html"><span aria-hidden="true">🛡️</span><strong>Garantia de 30 dias</strong><small>Não gostou? Solicite o reembolso e devolvemos seu dinheiro!</small></a><a href="https://wa.me/message/YZJGV7GRVTZJA1" target="_blank" rel="noopener"><span aria-hidden="true">💬</span><strong>Ficou com dúvidas?</strong><small>Acione um especialista no WhatsApp.</small></a><div><span aria-hidden="true">✨</span><strong>+50 mil pessoas já estão usando Velmo Black</strong><small>Você pode ser a próxima.</small></div><div><span aria-hidden="true">⭐</span><strong>Os queridinhos das Musas</strong><small>Conheça a linha Velmo Black.</small></div></div>
+<div class="entry-benefits"><a href="https://sac.easy4u.group/chatweb" target="_blank" rel="noopener"><span aria-hidden="true">🛡️</span><strong>Garantia de 30 dias</strong><small>Não gostou? Solicite o reembolso e devolvemos seu dinheiro!</small></a><a href="https://wa.me/message/YZJGV7GRVTZJA1" target="_blank" rel="noopener"><span aria-hidden="true">💬</span><strong>Ficou com dúvidas?</strong><small>Acione um especialista no WhatsApp.</small></a><div><span aria-hidden="true">✨</span><strong>+50 mil pessoas já estão usando Velmo Black</strong><small>Você pode ser a próxima.</small></div><div><span aria-hidden="true">⭐</span><strong>Os queridinhos das Musas</strong><small>Conheça a linha Velmo Black.</small></div></div>
 <p class="entry-final-line">Vários problemas, <strong>1 solução: Nossa linha Velmo Black.</strong></p>
 </div></div></section>
 <section class="hero section-pad" id="inicio">
@@ -278,7 +297,7 @@ body.pre-entry .entry-gate{padding-bottom:max(40px,env(safe-area-inset-bottom));
 
 </div></div></section>
 <aside class="floating-video" id="floatingVideo" aria-label="Vídeo do Velmo Black"><div class="floating-video-top"><div class="floating-video-title" id="videoDragHandle" role="button" tabindex="0" aria-label="Arraste para mover o vídeo">⠿ Arraste o vídeo</div><button class="floating-video-close" id="closeFloatingVideo" type="button" aria-label="Fechar vídeo">×</button></div><div class="floating-video-frame"><iframe id="miniYoutube" title="Vídeo do Velmo Black, sem áudio" loading="eager" allow="autoplay; encrypted-media; picture-in-picture" data-src="https://www.youtube-nocookie.com/embed/bVhHJy2D9RA?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=bVhHJy2D9RA&amp;playsinline=1&amp;controls=1"></iframe><button id="listenYoutube" type="button" aria-label="Assistir vídeo com áudio">▶ Ouvir vídeo</button></div></aside>
-<aside class="guarantee-band" aria-label="Garantia de 30 dias"><span class="guarantee-band-icon" aria-hidden="true">🛡️</span><div><strong>30 dias de garantia</strong><p>É muito simples, se em 30 dias de uso você não gostar dos resultados, entre em contato solicitando reembolso e devolveremos 100% o seu investimento.</p><a href="refund.html">Confira as condições da garantia</a></div></aside>
+<aside class="guarantee-band" aria-label="Garantia de 30 dias"><span class="guarantee-band-icon" aria-hidden="true">🛡️</span><div><strong>30 dias de garantia</strong><p>É muito simples, se em 30 dias de uso você não gostar dos resultados, entre em contato solicitando reembolso e devolveremos 100% o seu investimento.</p><a href="https://sac.easy4u.group/chatweb" target="_blank" rel="noopener">Solicitar atendimento no SAC</a></div></aside>
 <section class="section-pad testimonials-section" id="depoimentos">
 <p class="testimonials-intro reveal">Conheça uma alternativa para quem quer emagrecer e ter mais energia sem usar medicamentos milagrosos e ainda conseguir encaixar o processo na rotina.</p>
 <div class="section-heading reveal">
@@ -307,7 +326,7 @@ body.pre-entry .entry-gate{padding-bottom:max(40px,env(safe-area-inset-bottom));
 
 
 <section class="section-pad offers-section" id="ofertas"><div class="offer-transition"><span class="eyebrow">AGORA, ESCOLHA SUA OFERTA</span><h2>Veja as ofertas do Velmo Black que preparamos para você.</h2><p>Quando estiver pronto, escolha o produto e finalize no checkout oficial Hest.</p></div>
-<aside class="guarantee-band" aria-label="Garantia de 30 dias"><span class="guarantee-band-icon" aria-hidden="true">🛡️</span><div><strong>30 dias de garantia</strong><p>É muito simples, se em 30 dias de uso você não gostar dos resultados, entre em contato solicitando reembolso e devolveremos 100% o seu investimento.</p><a href="refund.html">Confira as condições da garantia</a></div></aside>
+<aside class="guarantee-band" aria-label="Garantia de 30 dias"><span class="guarantee-band-icon" aria-hidden="true">🛡️</span><div><strong>30 dias de garantia</strong><p>É muito simples, se em 30 dias de uso você não gostar dos resultados, entre em contato solicitando reembolso e devolveremos 100% o seu investimento.</p><a href="https://sac.easy4u.group/chatweb" target="_blank" rel="noopener">Solicitar atendimento no SAC</a></div></aside>
 <div class="section-heading reveal"><span class="eyebrow">OFERTAS VELMO BLACK</span><h2>Escolha o produto e a quantidade.</h2></div>
 <div class="offer-product-tabs glass reveal"><button class="offer-product-tab active" data-offer-panel="drink">🥤 Velmo Drink</button><button class="offer-product-tab" data-offer-panel="caps">💊 Velmo Cápsulas</button><button class="offer-product-tab" data-offer-panel="combo">⚡ Combo Velmo</button><button class="offer-product-tab" data-offer-panel="gummy">🍬 Outros produtos</button></div>
 <div class="offer-panel active" data-panel="drink">
@@ -384,7 +403,7 @@ body.pre-entry .entry-gate{padding-bottom:max(40px,env(safe-area-inset-bottom));
 <div class="footer-grid">
 <div><div class="footer-brand-line"><img alt="Velmora" src="velmora_logo.png"/><div><strong>VELMO BLACK Drink</strong><p>Produto da linha Velmora.</p></div></div><a href="https://www.instagram.com/velmorabr/" rel="noopener" target="_blank">Instagram oficial @velmorabr</a></div>
 <div><a href="https://rastreiovelmora.com.br/" rel="noopener" target="_blank">Rastrear pedido</a><a href="#faq">Perguntas frequentes</a><a href="#rotulo">Informação nutricional</a><a href="https://chat.whatsapp.com/HzU8NXe29m94Q3h8b6AS1o?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4" rel="noopener" target="_blank">Grupo de promoções</a></div>
-<div><a href="privacy.html">Política de Privacidade</a><a href="terms.html">Termos de Uso</a><a href="refund.html">Garantia e Reembolso</a></div>
+<div><a href="privacy.html">Política de Privacidade</a><a href="terms.html">Termos de Uso</a><a href="https://sac.easy4u.group/chatweb" target="_blank" rel="noopener">Garantia e Reembolso</a></div>
 </div>
 <p class="footer-disclaimer">Produto destinado a adultos conforme informações do rótulo. Resultados individuais podem variar. Consulte a embalagem e orientação profissional quando necessário.</p>
 </footer>
@@ -604,8 +623,8 @@ document.querySelectorAll('.gummy-buy').forEach(link=>link.addEventListener('cli
 // Drag via mouse or touch; suppress the WhatsApp click when the gesture moves.
 (()=>{const widget=document.getElementById('whatsappWidget'),button=document.getElementById('whatsappBtn');if(!widget)return;let start=null,dragged=false,suppress=false;
 widget.addEventListener('pointerdown',e=>{if(e.button!==0)return;const rect=widget.getBoundingClientRect();start={id:e.pointerId,x:e.clientX,y:e.clientY,left:rect.left,top:rect.top};dragged=false;widget.setPointerCapture(e.pointerId)});
-widget.addEventListener('pointermove',e=>{if(!start||e.pointerId!==start.id)return;let dx=e.clientX-start.x,dy=e.clientY-start.y;if(Math.hypot(dx,dy)>5)dragged=true;if(!dragged)return;e.preventDefault();widget.classList.add('is-dragging');const maxX=Math.max(0,innerWidth-widget.offsetWidth),maxY=Math.max(0,innerHeight-widget.offsetHeight);widget.style.left=Math.max(0,Math.min(maxX,start.left+dx))+'px';widget.style.top=Math.max(0,Math.min(maxY,start.top+dy))+'px';widget.style.right='auto';widget.style.bottom='auto'});
-function finish(e){if(!start||e.pointerId!==start.id)return;if(dragged){suppress=true;setTimeout(()=>{suppress=false},250)}start=null;widget.classList.remove('is-dragging')}
+widget.addEventListener('pointermove',e=>{if(!start||e.pointerId!==start.id)return;let dx=e.clientX-start.x,dy=e.clientY-start.y;if(Math.hypot(dx,dy)>5)dragged=true;if(!dragged)return;e.preventDefault();widget.classList.add('is-dragging');const maxX=Math.max(0,innerWidth-widget.offsetWidth),maxY=Math.max(0,innerHeight-widget.offsetHeight);const x=Math.max(0,Math.min(maxX,start.left+dx));widget.style.left=x+'px';widget.style.top=Math.max(0,Math.min(maxY,start.top+dy))+'px';widget.style.right='auto';widget.style.bottom='auto';widget.classList.toggle('dock-left',x<maxX/2)});
+function finish(e){if(!start||e.pointerId!==start.id)return;if(dragged){suppress=true;const leftSide=parseFloat(widget.style.left)<(innerWidth-widget.offsetWidth)/2;widget.classList.toggle('dock-left',leftSide);widget.style.left=(leftSide?6:Math.max(6,innerWidth-widget.offsetWidth-6))+'px';setTimeout(()=>{suppress=false},250)}start=null;widget.classList.remove('is-dragging')}
 widget.addEventListener('pointerup',finish);widget.addEventListener('pointercancel',finish);
 button?.addEventListener('click',e=>{if(suppress){e.preventDefault();e.stopImmediatePropagation();suppress=false}},true);
 window.addEventListener('resize',()=>{if(!widget.style.left)return;widget.style.left=Math.max(0,Math.min(innerWidth-widget.offsetWidth,parseFloat(widget.style.left)))+'px';widget.style.top=Math.max(0,Math.min(innerHeight-widget.offsetHeight,parseFloat(widget.style.top)))+'px'});
